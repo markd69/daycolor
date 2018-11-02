@@ -63,7 +63,7 @@ function expressSetup() {
                     client_secret: 'hx0VmpOIa5MHn9M6OXKgbo2nhaVXzrTn',
                     grant_type: 'authorization_code',
                     code: req.query.code,
-                    redirect_uri: 'http://172.106.202.26:5000/api/discord/',
+                    redirect_uri: 'http://172.106.202.26:8080/api/discord/',
                     scope: 'identify'
                 };
             let URL = '?';
