@@ -57,6 +57,7 @@ function expressSetup() {
 
     app.get('/api/discord/', async (req, res) => {
         try {
+            console.log(1);
             let body =
                 {
                     client_id: '402488143821012992',
@@ -71,20 +72,26 @@ function expressSetup() {
                 let item = Object.entries(body)[i];
                 URL = URL + `${item[0]}=${item[1]}&`;
             }
+            console.log(2);
             URL = URL.slice(0, -1);
             let returned = await fetch('https://discordapp.com/api/oauth2/token'+URL, {method: 'POST'});
+            console.log(3);
             let returnedJson = await returned.json();
             let headers = {
                 Authorization: 'Bearer '+returnedJson.access_token
             };
             returned = await fetch('https://discordapp.com/api/users/@me', {method: 'GET', headers: headers});
+            console.log(4);
             returnedJson = await returned.json();
             let id = returnedJson.id;
             let whmcsId = res.req.query.state;
             whmcsId = reverseMd5(whmcsId).str;
             await sql.run(`INSERT INTO whmcs VALUES (?, ?)`, [whmcsId, id]);
+            console.log(5);  
             res.redirect('/success');
+            console.log(6);
         } catch (err) {
+            console.error(err, 'catched');
             res.redirect('/fail');
         }
     });
