@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42e04ab6-fe6b-4a18-beb3-00d01ad33062" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/commands/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/whmcsGet.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/whmcsGet.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,17 +50,6 @@
         <option value="JavaScript File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>clientId</find>
-      <find>console.log</find>
-      <find>request</find>
-      <find>,please</find>
-      <find>please</find>
-      <find>mysql</find>
-      <find>console.log(</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -135,8 +122,16 @@
       <workItem from="1541104542396" duration="604000" />
       <workItem from="1541177074399" duration="234000" />
       <workItem from="1541184705681" duration="7348000" />
-      <workItem from="1574454030396" duration="202000" />
+      <workItem from="1574454030396" duration="1005000" />
     </task>
+    <task id="LOCAL-00001" summary="Fix solution #1 for whmcs api usage improvement.">
+      <created>1574454352924</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574454352924</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,5 +147,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fix solution #1 for whmcs api usage improvement." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix solution #1 for whmcs api usage improvement." />
   </component>
 </project>

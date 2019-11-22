@@ -8,9 +8,9 @@ exports.run = async (client, msg, args) => {
     let member = msg.mentions.members.first();
     if (!member) return Embed(msg.channel, `You must mention the member you wish to get the information of.`, 'error', 'Error');
     let row = await sql.get(`SELECT * FROM whmcs WHERE discordId = "${member.id}"`);
-    if (!row) return;
+    if (!row) return Embed(msg.channel, `${member} does not have a linked WHMCS account.`, 'error', 'Error');
     let clientUser = await whmcsGet.get({ clientid: row.clientId }, 'GetClientsDetails');
-    if (!value) return Embed(msg.channel, `${member} does not have a WHMCS account or did not link it.`, 'error', 'Error');
+    if (!clientUser) return Embed(msg.channel, `${member} does not have a WHMCS account.`, 'error', 'Error');
     Embed(msg.channel, `Email: ${clientUser['email']}\nFull name: ${clientUser['firstname']} ${clientUser['lastname']}`, 'main', `${member.user.username}#${member.user.discriminator} Client Info`)
 };
 
